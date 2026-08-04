@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6d2e3e" />
+  <title>CreamyDreams Cake | Baked with love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+  <div id="announcement-text" class="announcement">Made for celebrations, baked with a whole lot of love <span>✦</span>
+    Orders open this week
+  </div>
+  <header class="site-header">
+    <a class="brand" href="#home"
+      aria-label="CreamyDreams Cake home"><span>CD</span><strong>CreamyDreams</strong><em>Cake</em></a>
+    <nav id="nav-links"><a href="#story">Our story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a
+        href="#order">Order</a></nav>
+    <div class="header-actions">
+      <a class="header-order" href="#order">Order a cake <span>→</span></a>
+      <a class="admin-switch" href="admin.html">Admin</a>
+    </div>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p id="hero-subtitle" class="eyebrow">The sweetest part of every celebration</p>
+        <h1 id="hero-title">Dreamy cakes,<br /><i>made for you.</i></h1>
+        <p id="hero-description" class="hero-text">Beautifully handcrafted cakes, cupcakes, and dessert tables for the
+          moments that deserve
+          something extra special.</p>
+        <div class="hero-actions"><a id="hero-primary-cta" class="button button-primary" href="#order">Start your order
+            <span>→</span></a><a id="hero-secondary-cta" class="text-link" href="#menu">Explore the menu
+            <span>↓</span></a></div>
+        <div class="hero-note">
+          <div class="avatars"><span>♥</span><span>✦</span><span>♥</span></div>
+          <p><b>Made with care</b><br />for birthdays, weddings & every sweet occasion.</p>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="arch"></div>
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1100&q=85"
+          alt="Elegant pink celebration cake" />
+        <div class="floating-card"><span class="sparkle">✦</span><b>100% made<br />with love</b><small>from our kitchen
+            to your table</small></div>
+        <div class="scribble">sweet<br />moments <span>↗</span></div>
+      </div>
+    </section>
+
+    <section id="story" class="intro section-pad">
+      <p id="story-subtitle" class="eyebrow centered">A little bit about us</p>
+      <h2 id="story-title">More than a cake.<br /><i>A memory in the making.</i></h2>
+      <p id="story-description">At CreamyDreams, every swirl of buttercream and every tiny detail is made with joy. We
+        believe beautiful
+        desserts have a way of bringing people together—and making ordinary days feel magical.</p>
+      <a id="story-cta" class="text-link burgundy" href="#order">Meet the baker through your order <span>→</span></a>
+    </section>
+
+    <section id="menu" class="menu-section section-pad">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Made just for your moment</p>
+          <h2>Something sweet<br /><i>for everyone.</i></h2>
+        </div><a class="text-link burgundy" href="#order">Ask about custom orders <span>→</span></a>
+      </div>
+      <div id="catalog-grid" class="menu-grid"></div>
+      <div class="upload-area">
+        <div><span class="upload-icon">↑</span>
+          <div><b>Update your menu here</b>
+            <p>Choose menu photos or a short video to preview them on this page.</p>
+          </div>
+        </div><label class="button button-outline">Add menu media <input id="media-upload" type="file"
+            accept="image/*,video/*" multiple hidden /></label>
+        <div id="upload-preview" class="upload-preview" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section section-pad">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A peek at the magic</p>
+          <h2>Made to be<br /><i>remembered.</i></h2>
+        </div>
+        <p class="gallery-copy">A collection of sweet details, happy tables, and cakes created for beautiful days.</p>
+      </div>
+      <div class="gallery-grid">
+        <img id="gallery-img-1" class="g1"
+          src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=900&q=80"
+          alt="Cupcakes with pink frosting" />
+        <img id="gallery-img-2" class="g2"
+          src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=900&q=80"
+          alt="Birthday cake with candles" />
+        <div class="video-card"><img id="gallery-img-3"
+            src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=900&q=80"
+            alt="Cake decorating" /><button id="play-video" aria-label="Play baker video">▶</button><span>Watch us make
+            magic</span></div>
+        <img id="gallery-img-4" class="g4"
+          src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80"
+          alt="Chocolate drip cake" />
+      </div>
+    </section>
+
+    <section id="order" class="order-section section-pad">
+      <div class="order-copy">
+        <p id="order-subtitle" class="eyebrow">Let’s make something beautiful</p>
+        <h2 id="order-title">Your celebration<br /><i>starts here.</i></h2>
+        <p id="order-description">Tell us a little about the occasion and your dream cake. We’ll get back to you with
+          all the sweet details.
+        </p>
+        <div class="contact-note"><span>✦</span>
+          <p><b id="order-chat-headline">Prefer to chat?</b><br /><span id="order-chat-details">Send us a message on
+              WhatsApp or Instagram.</span></p>
+        </div>
+      </div>
+      <form id="order-form" class="order-form">
+        <div class="form-row"><label>Your name<input required name="name" placeholder="Jane Doe" /></label><label>Your
+            phone / email<input required name="contact" placeholder="How can we reach you?" /></label></div>
+        <div class="form-row"><label>WhatsApp number<input id="order-whatsapp" required name="whatsapp" type="tel"
+              placeholder="+1 (555) 123-4567" /></label><label>What are we celebrating?<select name="occasion">
+              <option>Birthday</option>
+              <option>Wedding</option>
+              <option>Baby shower</option>
+              <option>Just because</option>
+              <option>Something else</option>
+            </select></label></div>
+        <div class="form-row"><label>When do you need it?<input type="date" name="date" /></label></div>
+        <label>Tell us about your dream cake<textarea name="details" rows="4"
+            placeholder="Flavours, number of guests, colours, inspiration…"></textarea></label>
+        <button class="button button-primary" type="submit">Send my cake request <span>→</span></button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer><a class="brand" href="#home"><span>CD</span><strong>CreamyDreams</strong><em>Cake</em></a>
+    <p id="footer-message">Made with butter, sugar & a sprinkle of joy.</p>
+    <div><a href="#">Instagram</a><a href="#">WhatsApp</a><a href="#home">Back to top ↑</a></div>
+  </footer>
+  <dialog id="video-modal"><button class="close-modal" aria-label="Close video">×</button>
+    <div class="video-placeholder"><span>✦</span>
+      <h3>Your baker video goes here</h3>
+      <p>Use the “Add menu media” button to preview a video, or replace this space with a social video link.</p>
+    </div>
+  </dialog>
+  <script type="module" src="src/main.js"></script>
+</body>
+
+</html>

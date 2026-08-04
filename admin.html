@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6d2e3e" />
+    <title>CreamyDreams Cake Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="src/admin.css" />
+</head>
+
+<body>
+    <header class="admin-header">
+        <a class="brand" href="index.html"><span>CD</span><strong>CreamyDreams</strong><em>Cake</em></a>
+        <div class="header-actions">
+            <a class="button button-outline" href="index.html">View Client Site</a>
+            <a class="button button-primary" href="admin.html">Admin Panel</a>
+        </div>
+    </header>
+    <main class="admin-main">
+        <div id="login-screen" class="login-card">
+            <h1>Admin access</h1>
+            <p class="subtitle">Enter the admin password to update your cake business content, media, and orders.</p>
+            <form id="login-form" class="login-form">
+                <label>Password<input id="admin-password" type="password" placeholder="Enter password"
+                        required /></label>
+                <button type="submit" class="button button-primary">Enter admin panel</button>
+            </form>
+            <p id="login-error" class="login-error" aria-live="polite"></p>
+        </div>
+
+        <div id="dashboard" class="dashboard hidden">
+            <h1>Admin Dashboard</h1>
+            <p class="subtitle">Update the site content, menu, gallery, media, and customer orders for your cake
+                business.</p>
+
+            <form id="admin-form" class="admin-form">
+                <section class="card">
+                    <h2>Announcement</h2>
+                    <label>Top banner text<textarea name="announcement" rows="2"
+                            placeholder="Made for celebrations..."></textarea></label>
+                </section>
+
+                <section class="card">
+                    <h2>Hero section</h2>
+                    <div class="field-grid">
+                        <label>Subtitle<input name="heroSubtitle"
+                                placeholder="The sweetest part of every celebration" /></label>
+                        <label>Headline<textarea name="heroTitle" rows="2"
+                                placeholder="Dreamy cakes, made for you."></textarea></label>
+                        <label>Description<textarea name="heroDescription" rows="3"
+                                placeholder="Beautifully handcrafted cakes..."></textarea></label>
+                        <label>Primary button text<input name="heroPrimaryCta"
+                                placeholder="Start your order →" /></label>
+                        <label>Secondary button text<input name="heroSecondaryCta"
+                                placeholder="Explore the menu ↓" /></label>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Story section</h2>
+                    <div class="field-grid">
+                        <label>Subtitle<input name="storySubtitle" placeholder="A little bit about us" /></label>
+                        <label>Title<textarea name="storyTitle" rows="2"
+                                placeholder="More than a cake. A memory in the making."></textarea></label>
+                        <label>Description<textarea name="storyDescription" rows="3"
+                                placeholder="At CreamyDreams, every swirl..."></textarea></label>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Menu items</h2>
+                    <div class="field-grid">
+                        <label>Item 1 title<input name="menuItem1Title" placeholder="Signature cakes" /></label>
+                        <label>Item 1 description<textarea name="menuItem1Description" rows="2"
+                                placeholder="Layered, lovely, and entirely yours."></textarea></label>
+                        <label>Item 2 title<input name="menuItem2Title" placeholder="Celebration cakes" /></label>
+                        <label>Item 2 description<textarea name="menuItem2Description" rows="2"
+                                placeholder="Big milestones deserve a big wow."></textarea></label>
+                        <label>Item 3 title<input name="menuItem3Title" placeholder="Little sweet things" /></label>
+                        <label>Item 3 description<textarea name="menuItem3Description" rows="2"
+                                placeholder="Cupcakes, cake jars & dessert boxes."></textarea></label>
+                    </div>
+                    <div class="catalog-editor">
+                        <h3>Add a new cake</h3>
+                        <div class="field-grid">
+                            <label>Name<input id="cake-name" placeholder="Rose Garden Cake" /></label>
+                            <label>Price<input id="cake-price" placeholder="From ₦45,000" /></label>
+                            <label>Image URL<input id="cake-image" placeholder="https://..." /></label>
+                            <label>Short description<textarea id="cake-description" rows="2"
+                                    placeholder="Elegant buttercream design..."></textarea></label>
+                        </div>
+                        <button type="button" id="add-cake-button" class="button button-outline">Add cake to
+                            catalog</button>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Gallery images</h2>
+                    <div class="field-grid">
+                        <label>Image 1 URL<input name="galleryImage1" placeholder="https://..." /></label>
+                        <label>Image 2 URL<input name="galleryImage2" placeholder="https://..." /></label>
+                        <label>Image 3 URL<input name="galleryImage3" placeholder="https://..." /></label>
+                        <label>Image 4 URL<input name="galleryImage4" placeholder="https://..." /></label>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Featured media</h2>
+                    <div class="field-grid">
+                        <label>Hero image<input id="hero-image-upload" type="file" accept="image/*" /></label>
+                        <label>Featured gallery media<input id="featured-media-upload" type="file"
+                                accept="image/*,video/*" /></label>
+                    </div>
+                    <div id="media-preview" class="media-preview">
+                        <div id="hero-preview"></div>
+                        <div id="featured-preview"></div>
+                    </div>
+                    <p id="upload-status" class="save-status"></p>
+                </section>
+
+                <section class="card">
+                    <h2>Order section</h2>
+                    <div class="field-grid">
+                        <label>Order subtitle<input name="orderSubtitle"
+                                placeholder="Let’s make something beautiful" /></label>
+                        <label>Order title<textarea name="orderTitle" rows="2"
+                                placeholder="Your celebration starts here."></textarea></label>
+                        <label>Order description<textarea name="orderDescription" rows="3"
+                                placeholder="Tell us a little about the occasion..."></textarea></label>
+                        <label>Chat headline<input name="orderChatHeadline" placeholder="Prefer to chat?" /></label>
+                        <label>Chat details<textarea name="orderChatDetails" rows="2"
+                                placeholder="Send us a message on WhatsApp or Instagram."></textarea></label>
+                        <label>WhatsApp placeholder<input name="orderWhatsappPlaceholder"
+                                placeholder="+1 (555) 123-4567" /></label>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Footer</h2>
+                    <label>Footer message<input name="footerMessage"
+                            placeholder="Made with butter, sugar & a sprinkle of joy." /></label>
+                </section>
+
+                <section class="card">
+                    <h2>Customer orders</h2>
+                    <div id="orders-list" class="orders-list"></div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit" class="button button-primary">Save changes</button>
+                    <button type="button" id="reset-button" class="button button-outline">Reset to defaults</button>
+                </div>
+                <p id="save-status" class="save-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </main>
+    <script type="module" src="src/admin.js"></script>
+</body>
+
+</html>
