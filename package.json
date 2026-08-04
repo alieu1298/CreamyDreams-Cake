@@ -2,6 +2,12 @@
   "name": "creamydreams-cake",
   "version": "1.0.0",
   "private": true,
-  "scripts": { "dev": "vite", "build": "vite", "preview": "vite preview" },
-  "devDependencies": { "vite": "latest" }
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  }
 }
